@@ -6,11 +6,11 @@ public class Conta {
     private String numeroConta;
     private double saldo;
 
-    public Conta(String numeroConta){
+    public Conta(){
         this.numeroConta = numeroConta;
         saldo = 0;
-        Conta.ultimoID++;
-        idConta = Conta.ultimoID;
+        App.ultimoID++;
+        idConta = App.ultimoID;
 
     }
     public int getidConta() {
@@ -21,7 +21,7 @@ public class Conta {
     }
 
     public static int getUltimoID() {
-        return Conta.ultimoID;
+        return App.ultimoID;
     }
     
 
