@@ -16,6 +16,5 @@ public class ContaAula28_03{
         return saldo;
     }
 
-    public void setNumeroConta(String string) {
-    }
+   
 }

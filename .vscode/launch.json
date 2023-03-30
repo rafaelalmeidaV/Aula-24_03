@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "ContaDemo",
+            "request": "launch",
+            "mainClass": "ContaDemo",
+            "projectName": "java_5b99ec2"
+        },
+        {
+            "type": "java",
             "name": "App",
             "request": "launch",
             "mainClass": "App",
