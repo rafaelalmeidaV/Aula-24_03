@@ -7,7 +7,7 @@ public class App {
         System.out.println(pessoa1.getNome());
         System.out.println(pessoa1.getRg());
 
-        Funcionario func1 = new Funcionario();
+        Funcionario func1 = new Funcionario("rafael", 123, 120);
         func1.setNome("kakakaak");
         func1.setRg("347267432");
         func1.setCartao(765);
