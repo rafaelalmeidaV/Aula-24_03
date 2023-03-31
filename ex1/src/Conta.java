@@ -8,7 +8,7 @@ public class Conta {
 
     public Conta(String numeroConta, double saldo, int ultimoID){
         this.numeroConta = numeroConta;
-        saldo = 0;
+        this.saldo = saldo;
         Conta.ultimoID++;
         idConta = Conta.ultimoID;
 
@@ -18,6 +18,14 @@ public class Conta {
     }
     public String getNumeroConta(){
         return numeroConta;
+    }
+
+    public double getSaldo(){
+        return saldo;
+    }
+
+    public void setSaldo(double saldo){
+        this.saldo = saldo;
     }
 
     public static int getUltimoID() {
