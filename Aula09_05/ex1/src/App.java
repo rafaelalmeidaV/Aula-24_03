@@ -50,13 +50,16 @@ public class App {
                     i++;
                 }
                 if(i<3){
-                    System.out.print("Nome: ");
-                    nome = input.next();
-                    System.out.print("CPF: ");
-                    cpf = input.next();
-                    pessoa[i].setNome(nome);
-                    pessoa[i].setCpf(cpf);
-                    System.out.println("Peessoa Alterada");
+                    if(pessoa[i].getNumero() == numero){
+                        System.out.print("Nome: ");
+                        nome = input.next();
+                        System.out.print("CPF: ");
+                        cpf = input.next();
+                        pessoa[i].setNome(nome);
+                        pessoa[i].setCpf(cpf);
+                        System.out.println("Peessoa Alterada");
+                    }
+                    
 
 
                 }else{
@@ -72,8 +75,11 @@ public class App {
                     i++;
                 }
                 if(i<3){
-                    pessoa[i] = null;
-                    System.out.println("Peessoa Excluida");
+                    if(pessoa[i].getNumero() == numero){
+                        pessoa[i] = null;
+                        System.out.println("Peessoa Excluida");
+                    }
+                    
                 }else{
                     System.out.println("Peessoa não encontrada");
                 }break;
@@ -87,7 +93,10 @@ public class App {
                     i++;
                 }
                 if(i<3){
-                    System.out.println(pessoa[i].toString());
+                    if(pessoa[i].getNumero() == numero){
+                        System.out.println(pessoa[i].toString());
+                    }
+                    
                 }else{
                     System.out.println("Peessoa não encontrada");
                 }break;
