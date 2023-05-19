@@ -49,6 +49,8 @@ public class App {
                         sc.nextLine();
                         System.out.println("Digie o nome que deseja alterar");
                         nome = sc.next();
+                        
+                        
                         i = 0;
                         while(i < 3 && conta1[i] != null ){
 
