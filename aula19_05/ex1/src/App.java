@@ -7,5 +7,12 @@ public class App {
         funcionarios[0] = new Funcionario("Rafael", 3600, emp);
 
         funcionarios[1] = new Funcionario("Joao", 3600, emp);
+
+
+        for (Funcionario funcionario : funcionarios) {
+            System.out.println(funcionario);
+        }
+
+        
     }
 }
