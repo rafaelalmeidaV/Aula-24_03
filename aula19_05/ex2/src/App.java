@@ -63,6 +63,95 @@ public class App {
                                     System.out.println("Não foi possivel cadastrar a pessoa!");
                                 }break;
 
+                            case 2:
+                                System.out.println("\n\n==[Alterar Pessoa]==");
+                                System.out.println("Digite o CPF da pessoa que deseja alterar: ");
+                                cpf = sc.nextInt();
+
+                                i=0;
+
+                                while(i<vet_pessoas && pessoas[i].getCPF()!=cpf){
+                                    i++;
+                                }
+
+                                if(i<vet_pessoas){
+                                    System.out.println("Digite o nome: ");
+                                    nome = sc.nextLine();
+                                    sc.nextLine();
+                                    System.out.println("Digite o RG: ");
+                                    rg = sc.nextLine();
+
+                                    pessoas[i].setNome(nome);
+                                    pessoas[i].setRg(rg);
+
+                                    System.out.println("Pessoa alterada com sucesso!");
+
+                                }else{
+                                    System.out.println("Não foi possivel alterar a pessoa!");
+                                }break;
+
+                            case 3:
+                                System.out.println("\n\n==[Excluir Pessoa]==");
+                                System.out.println("Digite o CPF da pessoa que deseja excluir: ");
+                                cpf = sc.nextInt();
+
+                                i=0;
+
+                                while(i<vet_pessoas && pessoas[i].getCPF()!=cpf){
+                                    i++;
+                                }
+
+                                if(i<vet_pessoas){
+                                    pessoas[i] = null;
+                                    System.out.println("Pessoa excluida com sucesso!");
+
+                                }else{
+                                    System.out.println("Não foi possivel excluir a pessoa!");
+                                }break;
+
+                            case 4:
+                                System.out.println("\n\n==[Consultar Pessoa]==");
+                                System.out.println("Digite o CPF da pessoa que deseja consultar: ");
+                                cpf = sc.nextInt();
+
+                                i=0;
+
+                                while(i<vet_pessoas && pessoas[i].getCPF()!=cpf){
+                                    i++;
+                                }
+
+                                if(i<vet_pessoas){
+                                    System.out.println("Nome: "+pessoas[i].getNome());
+                                    System.out.println("CPF: "+pessoas[i].getCPF());
+                                    System.out.println("RG: "+pessoas[i].getRg());
+
+                                }else{
+                                    System.out.println("Não foi possivel consultar a pessoa!");
+                                }break;
+
+                            case 5:
+                                System.out.println("\n\n==[Imprimir Pessoa]==");
+                                System.out.println("Digite o CPF da pessoa que deseja imprimir: ");
+                                cpf = sc.nextInt();
+
+                                i=0;
+
+                                while(i<vet_pessoas && pessoas[i].getCPF()!=cpf){
+                                    i++;
+                                }
+
+                                if(i<vet_pessoas){
+                                    System.out.println(pessoas[i].toString());
+
+                                }else{
+                                    System.out.println("Não foi possivel imprimir a pessoa!");
+                                }break;
+
+                            case 6:
+                                System.out.println("Saindo do menu Pessoa...");
+                                break;
+                                
+
                     }
             }while(op2!=6);
 
