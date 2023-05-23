@@ -150,7 +150,7 @@ public class App {
                             case 6:
                                 System.out.println("Saindo do menu Pessoa...");
                                 break;
-                                
+
 
                     }
             }while(op2!=6);
@@ -158,5 +158,6 @@ public class App {
         }
 
 
+        }while(op!=3);
     }
 }
