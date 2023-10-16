@@ -11,7 +11,7 @@ public class App {
         Cliente[] cliente = new Cliente[pos_cliente];
         Endereco[] endereco = new Endereco[pos_endereco];
 
-        int op, op2, numero = 0, i, a, qtdEndereco = 2;
+        int op, op2, numero = 0, i, a, qtdEndereco = 0;
         String nome = null, cpf = null, complemento = null, cep = null, rua = null, cidade = null;
 
         do {
@@ -54,18 +54,15 @@ public class App {
                                         i++;
                                     }
 
-                                    if (i < 3) {
-                                        cliente[i] = new Cliente(nome, cpf, endereco[i], complemento, numero);
-                                        System.out.println("Cliente cadastrado com sucesso");
+                                    if (cliente[i].getEnd().getCep() == null) {
+                                        System.out.println("cliente nao tem endereço cadastre-o primeiro");
                                     } else {
                                         System.out.println("Não foi possivel cadastrar o cliente");
                                         break;
 
-                                    }
+                                    }                           
 
-                                    
-
-                                }else
+                                }
                                 break;
 
                             case 2:
@@ -75,7 +72,6 @@ public class App {
                                     
                                     i = 0;
                                     while(i < 3 && cliente[i].getCpf() != cpf){
-
                                         i++;
                                     }
                                     if(i<3){
@@ -97,7 +93,7 @@ public class App {
                             
                             case 3:
                                 if(qtdEndereco>0){
-                                    System.out.println("digite o cpf que deseja alterar");
+                                    System.out.println("digite o cpf que deseja excluir");
                                     cpf = sc.next();
 
                                     i=0;
@@ -116,6 +112,19 @@ public class App {
                                 }
                             case 4:
                                 if(qtdEndereco>0){
+                                    System.out.println("digite o cpf do cliente que voce quer visualizar");
+                                    cpf = sc.next();
+
+                                    i =0;
+                                    while(i<3 && cliente[i].getCpf() != cpf){
+                                        i++;
+                                    }
+
+                                    if(i<3){
+                                        if(cliente[i].getCpf() == cpf){
+                                            System.out.println("cliente: "+cliente[i].toString());
+                                        }
+                                    }
                                     
                                 }
 
